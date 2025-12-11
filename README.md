@@ -1,4 +1,4 @@
-<img width="300" height="100" alt="Logo_CMH" src="https://github.com/user-attachments/assets/02031362-88ab-4fee-9596-b1ccdb1c1b92" />
+
 
 🎉 <span style="font-size:38px;">Crash Course – Network Analysis in Mental Health</span>
  ### **Ettore Majorana Workshop** ### *“Complexity in Mental Health: The Interplay Between Brain, Behavior, and Context”* **Erice, 26 April – 1 May 2026**
