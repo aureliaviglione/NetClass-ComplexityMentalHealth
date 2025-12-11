@@ -1,10 +1,31 @@
 <img width="600" height="300" alt="Logo_CMH" src="https://github.com/user-attachments/assets/02031362-88ab-4fee-9596-b1ccdb1c1b92" />
 
-🔍 Description
+📘 Crash Course: Network Analysis in Mental Health
+
+Ettore Majorana Workshop — “Complexity in Mental Health: The Interplay Between Brain, Behavior, and Context”
+Erice, 26 April – 1 May 2026
+
+This crash course provides hands-on training in network analysis using real-world mental-health data. Participants will learn to build, visualize, and interpret complex networks using R.
+
+📑 Table of Contents
+
+Description
+
+Dependencies
+
+Install R
+
+Install RStudio
+
+Open RStudio
+
+Install Required R Packages
+
+#🔍 Description
 
 This course is part of the Ettore Majorana Workshop “Complexity in Mental Health: The Interplay Between Brain, Behavior, and Context.” It is designed to introduce participants to key concepts in network theory and its applications in mental-health research, with a focus on practical implementation in R.
 
-🛠 Dependencies
+#🛠 Dependencies
 
 To run the tutorials, please install R, RStudio, and the required R packages.
 
