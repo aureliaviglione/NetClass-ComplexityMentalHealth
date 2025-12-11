@@ -70,3 +70,4 @@ Paste the package list
 
 Click Install
 
+![r](https://github.com/user-attachments/assets/5229a28d-8c04-4607-afb0-ea69195d0511)
