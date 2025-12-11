@@ -1,4 +1,4 @@
-
+<img width="600" height="300" alt="Logo_CMH" src="https://github.com/user-attachments/assets/02031362-88ab-4fee-9596-b1ccdb1c1b92" />
 
 🎉 <span style="font-size:38px;">Crash Course – Network Analysis in Mental Health</span>
  ### **Ettore Majorana Workshop** ### *“Complexity in Mental Health: The Interplay Between Brain, Behavior, and Context”* **Erice, 26 April – 1 May 2026**
@@ -13,7 +13,9 @@ You will learn to build, visualize, and interpret complex networks using R and m
 To run the tutorials, please install:
 
 ✔ R
+
 ✔ RStudio
+
 ✔ Required R packages
 
 🧩 1. Install R
