@@ -18,7 +18,7 @@ To run the tutorials, please install:
 
 ✔ Required R packages
 
-🧩 1. Install R
+### 🧩 1. Install R
 
 Visit the official R website:
 👉 https://cran.r-project.org
@@ -32,7 +32,7 @@ Windows → Download R for Windows → base → download .exe
 Open the installer and follow the instructions
 (default options recommended)
 
-🚀 2. Install RStudio
+### 🚀 2. Install RStudio
 
 Go to the RStudio download page:
 👉 https://posit.co/download/rstudio-desktop/
@@ -43,7 +43,7 @@ macOS: download .dmg → drag to Applications
 
 Windows: download .exe → run the installer
 
-📂 3. Open RStudio
+### 📂 3. Open RStudio
 
 macOS → Applications
 
@@ -51,7 +51,7 @@ Windows → Start Menu or Desktop icon
 
 RStudio will automatically detect your R installation.
 
-📦 4. Install Required R Packages
+### 📦 4. Install Required R Packages
 
 👉 Install all packages at once (recommended)
 install.packages(c(
