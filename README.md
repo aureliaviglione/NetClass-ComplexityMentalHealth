@@ -70,5 +70,5 @@ Paste the package list
 
 Click Install
 
-<img src="https://github.com/user-attachments/assets/5229a28d-8c04-4607-afb0-ea69195d0511" width="150">
+<img src="https://github.com/user-attachments/assets/5229a28d-8c04-4607-afb0-ea69195d0511" width="300">
 
