@@ -1,9 +1,48 @@
 <img width="600" height="300" alt="Logo_CMH" src="https://github.com/user-attachments/assets/02031362-88ab-4fee-9596-b1ccdb1c1b92" />
 
-🎉 <span style="font-size:38px;">Crash Course – Network Analysis in Mental Health</span>
- ### **Ettore Majorana Workshop** *“Complexity in Mental Health: The Interplay Between Brain, Behavior, and Context”* **Erice, 26 April – 1 May 2026**
+# 🎉 Crash Course – Network Analysis in Mental Health
 
-### 📘 Description
+### **Ettore Majorana Workshop**  
+**“Complexity in Mental Health: The Interplay Between Brain, Behavior, and Context”**  
+📍 Erice, 26 April – 1 May 2026
 
-This crash course provides hands-on training in network analysis using real mental-health datasets.
-You will learn to build, visualize, and interpret complex networks using R and modern analytical tools.
+---
+
+## 📘 Description
+
+This crash course provides **hands-on training in network analysis** using real mental-health datasets.
+
+You will learn to:
+
+- build and analyze psychological and brain networks
+- visualize complex systems
+- apply network science tools in R and Python
+
+---
+
+## 📚 Tutorials
+
+| Tutorial | Topic | Language |
+|----------|------|----------|
+| Tutorial 1 | Brain network modeling | Python |
+| Tutorial 2 | Psychological network estimation | R |
+| Tutorial 3 | Network comparison & bootstrapping | R |
+
+---
+
+## 🛠️ Setup Instructions
+
+Before starting, install the required software.
+
+### 🐍 Python (Tutorial 1)
+👉 See full guide: [setup_python.md](docs/setup_python.md)
+
+---
+
+### 📊 R (Tutorials 2–3)
+👉 See full guide: [setup_R.md](docs/setup_R.md)
+
+---
+
+## 📁 Repository Structure
+
