@@ -1,6 +1,6 @@
-### 🛠️ Dependencies
+# 🚀 Installing R and RStudio from Scratch
 
-To run the tutorials 2 and 3, please install:
+This short tutorial explains how to install:
 
 ✔ R
 
