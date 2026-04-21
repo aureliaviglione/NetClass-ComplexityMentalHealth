@@ -46,7 +46,7 @@ Check that Python is installed:
 python --version
 ```
 
-## 🧱 Create a New Python Environment
+## 🧱 3. Create a New Python Environment
 
 Create a clean environment called "myenv_tutorial":
 
@@ -60,7 +60,7 @@ conda activate myenv_tutorial
 ```
 ✅ You should now see (myenv_tutorial) in your terminal.
 
-📦 4. Install Scientific Packages
+## 📦 4. Install Scientific Packages
 With the environment activated, **please install the required packages**:
 
 - ✅ **Required dependencies**: numpy, scipy, matplotlib, and bctpy.
@@ -71,7 +71,7 @@ conda install numpy scipy matplotlib bctpy jupyter
 - ✅ [**HOI package**]: (https://github.com/brainets/hoi)
   
 ---
-📁 5. Go to the Tutorial Folder
+## 📁 5. Go to the Tutorial Folder
 
 Before starting Jupyter Notebook, make sure you are located in the 
 folder that contains the tutorial materials.
@@ -86,7 +86,7 @@ Use the terminal to navigate to the folder, for example:
 cd path/to/MathModel_Neuro/tutorials
 ```
 
-📓 6. Start Jupyter Notebook
+## 📓 6. Start Jupyter Notebook
 Launch Jupyter Notebook with:
 ```console
 jupyter notebook
