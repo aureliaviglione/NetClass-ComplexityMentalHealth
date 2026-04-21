@@ -20,6 +20,14 @@ You will learn to:
 
 ---
 
+## Instructors
+
+- Marilyn Gatica (Northeastern University London, UK) 
+- Claudia Delli Colli (Istituto Superiore di Sanità, Rome, Italy)  
+- Aurelia Viglione (Istituto Superiore di Sanità, Rome, Italy)  
+
+---
+
 ## 📚 Tutorials
 
 | Tutorial | Topic | Language |
