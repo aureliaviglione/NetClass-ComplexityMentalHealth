@@ -61,3 +61,27 @@ Paste the package list
 Click Install
 
 <img src="https://github.com/user-attachments/assets/5229a28d-8c04-4607-afb0-ea69195d0511" width="300">
+
+### 📁 5. Go to the Tutorial Folder
+
+Before starting the tutorial, make sure the tutorial materials are available on your computer.
+
+1. Download the R scripts and Datasets to your computer.
+2. Locate the main project directory (e.g., `CrashCourse_NetworkMentalHealth`).
+3. Open the folder that contains the tutorials (e.g., `Tutorial_2`).
+
+### 📊 6. Open the Tutorial in RStudio
+
+Start **RStudio** and open the tutorial script.
+
+Option 1 — Open the file manually:
+
+1. Open RStudio  
+2. Click **File → Open File**  
+3. Navigate to the `tutorials` folder  
+4. Select the tutorial script (e.g., `Tutorial 2 - Cross-sectional graph.R`)
+
+Option 2 — Set the working directory:
+
+```r
+setwd("path/to/CrashCourse_NetworkMentalHealth/Tutorial_2")
