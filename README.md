@@ -24,9 +24,9 @@ You will learn to:
 
 | Tutorial | Topic | Language |
 |----------|------|----------|
-| Tutorial 1 | Brain network modeling | Python |
-| Tutorial 2 | Psychological network estimation | R |
-| Tutorial 3 | Network comparison & bootstrapping | R |
+| Tutorial 1 | High-order networks in mental health research | Python |
+| Tutorial 2 | Getting started with symptom networks in R: from data analysis to visualization | R |
+| Tutorial 3 | Individual networks and applications in mental health research | R |
 
 ---
 
