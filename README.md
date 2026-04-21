@@ -51,6 +51,3 @@ Before starting, install the required software.
 👉 See full guide: [setup_R.md](docs/setup_R.md)
 
 ---
-
-## 📁 Repository Structure
-
