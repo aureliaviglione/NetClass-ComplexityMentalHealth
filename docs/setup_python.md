@@ -61,11 +61,16 @@ conda activate myenv_tutorial
 ✅ You should now see (myenv_tutorial) in your terminal.
 
 📦 4. Install Scientific Packages
-With the environment activated, install the basic packages:
+With the environment activated, **please install the required packages**:
+
+- ✅ **Required dependencies**: numpy, scipy, matplotlib, and bctpy.
+- 
 ```console
 conda install numpy scipy matplotlib bctpy jupyter
 ```
-
+- ✅ [**HOI package**]: (https://github.com/brainets/hoi)
+  
+---
 📁 5. Go to the Tutorial Folder
 
 Before starting Jupyter Notebook, make sure you are located in the 
