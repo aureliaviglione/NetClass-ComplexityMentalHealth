@@ -68,7 +68,7 @@ Before starting the tutorial, make sure the tutorial materials are available on 
 
 1. Download the R scripts and Datasets to your computer.
 2. Locate the main project directory (e.g., `CrashCourse_NetworkMentalHealth`).
-3. Open the folder that contains the tutorials (e.g., `Tutorial_2`).
+3. Create the folder that will contain the tutorial materials (e.g., `Tutorial_2`).
 
 ### 📊 6. Open the Tutorial in RStudio
 
@@ -78,7 +78,7 @@ Option 1 — Open the file manually:
 
 1. Open RStudio  
 2. Click **File → Open File**  
-3. Navigate to the `tutorials` folder  
+3. Navigate to the `tutorials` folder (e.g., `CrashCourse_NetworkMentalHealth/Tutorial_2`) 
 4. Select the tutorial script (e.g., `Tutorial 2 - Cross-sectional graph.R`)
 
 Option 2 — Set the working directory:
