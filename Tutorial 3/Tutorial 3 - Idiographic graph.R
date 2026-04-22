@@ -12,7 +12,10 @@ df <- read_excel("Dataset_tutorial_2.xlsx")
 Vars=c("stress","mood", "sleep", "fatigue", "motivation", "intrusive",  "help", "social",  "organizing",  "feedback",  "evaluating", "anxiety", "enjoyment", "learning")
 
 #-----------------------Detrend data-------------------------------------------------#
-#because model assumes stationarity
+#IMPORTANT
+#We removed gradual time-related trends from each participant’s repeated measurements so the model 
+#would capture short-term fluctuations between variables rather than long-term change (i.e., time trends such as gradual improvement, deterioration)
+#Time trends are not the same as moment-to-moment dynamic relations between variables.
 
 detrended <- df %>%
   mutate(across(all_of(Vars), ~ as.numeric(.))) %>%
@@ -21,7 +24,7 @@ detrended <- df %>%
   mutate(across(all_of(Vars),
                 ~ {
                   if(sum(!is.na(.)) > 2) { # check for enough data
-                    resid(lm(. ~ Day, na.action = na.exclude))
+                    resid(lm(. ~ Day, na.action = na.exclude)) #Residuals: represent deviations from the person-specific linear trend
                   } else {
                     . # To much missing data, keep data without detrending it
                   }
@@ -31,7 +34,6 @@ detrended <- df %>%
 
 #-----------------------Fit the model-------------------------------------------------------#
 #gamma: control how much sparse is the model, set between 0 and 0.5, higher values more parsimonious model
-#Takes 5 minutes
 t <- 0.5 
 GraphVAR_all <- mlGraphicalVAR(detrended, vars = Vars,
                                idvar = "name", 
@@ -44,8 +46,8 @@ GraphVAR_all <- mlGraphicalVAR(detrended, vars = Vars,
 
 
 # --------------------Plot individual networks-------------------------------#
-#5 individuals
-for (i in 20:24) {
+#example for: 4 individuals
+for (i in 17:20) {
   par(mfrow = c(1, 2))
   
   # Contemporaneous network 
@@ -53,7 +55,7 @@ for (i in 20:24) {
          minimum = 0.05, 
          labels = Vars,
          layout = "spring",
-         title = paste("PCC:", GraphVAR_all$ids[[i]]))
+         title = paste("Contemporaneous:", GraphVAR_all$ids[[i]]))
   
   # Temporal network
   qgraph(GraphVAR_all$subjectPDC[[i]], 
@@ -61,24 +63,21 @@ for (i in 20:24) {
          labels = Vars,
          layout = "circle",
          arrows = TRUE,
-         title = paste("PDC:", GraphVAR_all$ids[[i]]))
+         title = paste("Temporal:", GraphVAR_all$ids[[i]]))
 }
-par(mfrow = c(1, 1))
-
-
 
 #-------------------------------Extract centrality measures--------------------------------------#
-#one subjects 
+#one subjects: to change subject modified the number in the square brackets (i.e., GraphVAR_all$subjectPCC[[ ]])
 centrality_subj1 <- centrality_auto(GraphVAR_all$subjectPCC[[5]])
-centrality_subj1$node.centrality
 centralityPlot(GraphVAR_all$subjectPCC[[1]], 
                include = c("Strength", "Betweenness", "Closeness"))
 
 
 
-#--------------------------Contemporaneous network---------#
+#--------------------------Contemporaneous network---------------------------------------------------#
 #Compare (just informative, not from statistical point of view)
-#'Strength across selected subjects from PCC 
+#'Strength across selected subjects from Contemporaneous network 
+
 get_centralities <- function(matrix, id, vars) {
   cent <- centrality_auto(matrix)$node.centrality
   
@@ -98,7 +97,6 @@ centralities_all <- lapply(1:length(unique(df$name)), function(i) {
 
 #summary table 
 df_centralities_pcc <- do.call(rbind, centralities_all)
-df_centralities_pcc
 
 #best nodes for each subjects
 get_top_nodes <- function(df) {
@@ -117,10 +115,15 @@ df_top_nodes
 #“The most frequent central node across subjects is: ”
 top_strength=df_top_nodes %>%
   count(Top_Strength, sort = TRUE)
+top_strength
+
+#--------------------------Temporal network---------------------------------------------------#
+#Out-strength: the total sum of weights of outgoing links from a node, how strongly a node predicts other nodes 
+#In-Strength: total sum of weights of incoming links to a node;how much a specific symptom is influenced by others.
 
 
 #Compare (just informative, not from statistical point of view)
-#'Strength across selected subjects from PDC
+#'Strength across selected subjects from Temporal
 get_centralities_pdc <- function(matrix, id, vars) {
   cent <- centrality_auto(matrix)$node.centrality
   
@@ -139,7 +142,7 @@ centralities_pdc_all <- lapply(1:length(GraphVAR_all$subjectPDC), function(i) {
 
 #summary table
 df_centralities_pdc <- do.call(rbind, centralities_pdc_all)
-df_centralities_pdc
+
 
 #best nodes for each subjects
 get_top_nodes_pdc <- function(df) {
@@ -174,7 +177,7 @@ df_top_nodes_pdc
 
 
 
-#Additional (just for curiosity):
+#Additional (just for curiosity!!):
 # --------------------Plot group levels networks-------------------------------#
 #Between-person: average stationary relationships between variables across different subjects (Reflects stable differences between people)
 layout(1) 
