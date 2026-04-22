@@ -7,7 +7,8 @@ library("readxl")
 library("dplyr")
 
 #---------------------------------Load files-------------------------------#
-data <- read_excel(".xlsx")
+setwd("") #set the working directory to the location where you have stored the files.
+data <- read_excel("Dataset_tutorial_2.xlsx")
 
 
 nodes=grep("item", names(data), value = TRUE)
@@ -43,38 +44,12 @@ network1$graph
 cs=sum(abs(network1$graph))/2 #connectivity strenght 
 
 #--Plot estimated netwotk---#
-node_colors <- grDevices::hcl.colors(length(nodes), "Dark 3")
-groups <- as.list(nodes)
-names(groups) <- nodes #Each node becomes its own group so the legend shows its color
-
-plot(network1,
-     layout = "spring",
-     
-     # Node fill color
-     color = node_colors,
-     vsize = 7,
-     
-     # Label settings
-     label.cex = 0.7,
-     label.color = "black",
-     label.prop = 0.9,
-     labels = FALSE,
-     
-     # Edges
-     negDashed = FALSE,
-     
-     groups = nodes,
-     
-     # Legend
-     legend.cex = 0.50,
-     legend.mode = "style2",
-     nodeNames = nodes,
-    
-     
-     # General
-     font = 2
-)
-
+qgraph(network1$graph,
+       layout = "spring",
+       labels = nodes,
+       color = "orange",
+       vsize = 8,
+       label.cex = 0.8)
 
 
 #--------------------------Stability of edge weights------------------------------------#
