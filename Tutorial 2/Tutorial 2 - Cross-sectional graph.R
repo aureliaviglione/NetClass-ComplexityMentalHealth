@@ -7,7 +7,6 @@ library("readxl")
 library("dplyr")
 
 #---------------------------------Load files-------------------------------#
-setwd()
 data <- read_excel(".xlsx")
 
 
