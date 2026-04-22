@@ -3,8 +3,11 @@ library(tidyr)
 library(readxl)
 library(dplyr)
 library(graphicalVAR)
-df <- readxl::read_xlsx("Dataset_class_2.xlsx")
-df
+
+#---------------------------------Load files-------------------------------
+setwd("") #set the working directory to the location where you have stored the files.
+df <- read_excel("Dataset_tutorial_2.xlsx")
+
 #nodes
 Vars=c("stress","mood", "sleep", "fatigue", "motivation", "intrusive",  "help", "social",  "organizing",  "feedback",  "evaluating", "anxiety", "enjoyment", "learning")
 
