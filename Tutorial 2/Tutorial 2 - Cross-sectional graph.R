@@ -89,6 +89,7 @@ plot(bootnet_centrality, 'all')
 #Correlation-Stability Coefficient (CS-Coefficient)
 corStability(bootnet_case_dropping)
 
+#You can drop up to ~67% of cases and still retain stable strength centrality estimates.
 
 #----------------------------------------------------Network comparison-------------------------------------------------------#
 treated <- subset(data, data$Arm == "Treatment")
