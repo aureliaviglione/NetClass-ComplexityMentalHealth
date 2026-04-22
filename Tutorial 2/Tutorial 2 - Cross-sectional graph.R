@@ -11,10 +11,11 @@ setwd("") #set the working directory to the location where you have stored the f
 data <- read_excel("Dataset_tutorial_2.xlsx")
 
 
-nodes=grep("item", names(data), value = TRUE)
+nodes_original=grep("item", names(data), value = TRUE)
 data <- data %>%
-  mutate_at(vars(nodes), as.numeric)
-
+  mutate_at(vars(nodes_original), as.numeric) %>%
+  rename_with(~ sub("^(item_[0-9]+).*", "\\1", .x), starts_with("item_"))
+nodes=grep("item", names(data), value = TRUE)
 
 
 #--------------------Regularized network (bootnet estimation)-------------------------------#
@@ -79,7 +80,6 @@ bootnet_centrality <- bootnet(network1,
                                  type = "case",
                                  nCores = 8,
                                  statistics = c('strength',
-                                                'expectedInfluence',
                                                 'betweenness',
                                                 'closeness'))
 
