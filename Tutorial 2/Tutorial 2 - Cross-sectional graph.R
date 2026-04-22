@@ -70,7 +70,7 @@ plot(bootnet_edge_weights,
 #---Stability of centrality measures---#
 #case-dropping bootstrap: randomly exclude cases from our original dataset, creating a new dataset
 
-centralityPlot(network1, include = "all", orderBy = "ExpectedInfluence")
+centralityPlot(network1, include = c("Strength", "Closeness", "Betweenness"))
 
 
 #Are our centrality indices realiable? How much do they change as we change our sample? 
