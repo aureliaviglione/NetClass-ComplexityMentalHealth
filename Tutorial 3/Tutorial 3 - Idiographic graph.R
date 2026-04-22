@@ -12,6 +12,8 @@ df <- read_excel("Dataset_tutorial_2.xlsx")
 Vars=c("stress","mood", "sleep", "fatigue", "motivation", "intrusive",  "help", "social",  "organizing",  "feedback",  "evaluating", "anxiety", "enjoyment", "learning")
 
 #-----------------------Detrend data-------------------------------------------------#
+#because model assumes stationarity
+
 detrended <- df %>%
   mutate(across(all_of(Vars), ~ as.numeric(.))) %>%
   group_by(name) %>%
@@ -71,6 +73,8 @@ centrality_subj1 <- centrality_auto(GraphVAR_all$subjectPCC[[5]])
 centrality_subj1$node.centrality
 centralityPlot(GraphVAR_all$subjectPCC[[1]], 
                include = c("Strength", "Betweenness", "Closeness"))
+
+
 
 #--------------------------Contemporaneous network---------#
 #Compare 'Strength across selected subjects from PCC
@@ -149,7 +153,7 @@ df_top_nodes_pdc
 
 
 #--------------------------Exercise--------------------#
-# 1) Which the nodes with more frequen higher betweens?
+# 1) Which the nodes with more frequent higher betweens?
 # Top Betweenness frequency
 
 
@@ -161,7 +165,14 @@ df_top_nodes_pdc
 
 
 
-#Additional:
+
+
+
+
+
+
+
+#Additional (just for curiosity):
 # --------------------Plot group levels networks-------------------------------#
 #Between-person: average stationary relationships between variables across different subjects (Reflects stable differences between people)
 layout(1) 
