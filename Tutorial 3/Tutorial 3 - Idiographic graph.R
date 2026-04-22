@@ -77,7 +77,8 @@ centralityPlot(GraphVAR_all$subjectPCC[[1]],
 
 
 #--------------------------Contemporaneous network---------#
-#Compare 'Strength across selected subjects from PCC
+#Compare (just informative, not from statistical point of view)
+#'Strength across selected subjects from PCC 
 get_centralities <- function(matrix, id, vars) {
   cent <- centrality_auto(matrix)$node.centrality
   
@@ -118,7 +119,8 @@ top_strength=df_top_nodes %>%
   count(Top_Strength, sort = TRUE)
 
 
-#Compare 'Strength across selected subjects from PDC
+#Compare (just informative, not from statistical point of view)
+#'Strength across selected subjects from PDC
 get_centralities_pdc <- function(matrix, id, vars) {
   cent <- centrality_auto(matrix)$node.centrality
   
