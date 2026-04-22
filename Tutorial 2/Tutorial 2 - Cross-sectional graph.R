@@ -24,8 +24,8 @@ data <- data %>%
 #gamma: control how much sparse is the model, set between 0 and 0.5, higher values more parsimonious model
 t <- 0.5 
 
+control <- subset(data, data$Arm == "Control") #select only control
 
-control <- subset(data, data$Arm == "Control")
 network1 <- estimateNetwork(
   data = control[, nodes],
   default = "EBICglasso",
